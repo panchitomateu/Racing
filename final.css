@@ -1,0 +1,332 @@
+* {
+    padding:0;
+    margin:0;
+    }
+header{
+    background: #000038;
+    color: white;   
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#menu {
+    padding-top: 10px;
+    }
+#menu li {
+    display: inline;
+    }
+#menu li a {
+    font-family: Arial;
+    font-size: 11px;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #000038;
+    color: #fff;
+}
+#menu li a:hover {
+    background-color: #2586d7;
+    margin-top: -2;
+    padding-bottom: 12px;
+    border-radius: 8px;
+}
+.logo{
+    width: 5%;
+}
+#contenidocilindro{
+    background: #2d77a8;
+    
+}
+.tita{
+    background: #1f5173;
+    display: flex;
+}
+.hinchada{
+    background: #0f2838;
+    display: flex;
+}
+.principal{
+    background: url("../imagenesracing/cilindroatardecer.jpg");
+    background-size: cover;
+    height: 800px;
+}
+.principal {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 200px;
+    grid-template-areas: 
+      ". a a ."
+      ". a a .";
+  }
+  .contenido1 {
+    grid-area: a;
+    align-self: center;
+    justify-self: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+    color: #000038;
+    background-color:rgba(0, 204, 240, 0.2);
+    border-radius: 10px;
+    text-align: center;
+  }
+.contenido {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 140px;
+    justify-content: space-around;
+    align-items: center;
+    grid-template-areas: 
+      "a b c"
+      "a b c"
+      "a b c"
+      "a b c";
+  }
+  .imagen-principal {
+    grid-area: a;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+  }
+  .descripcion{
+    grid-area: b;
+    text-align: center;
+    color: #fff;
+    font-family: sans-serif;
+  }
+  .imagen-secundaria {
+    grid-area: c;
+    text-align: center;
+    align-items: center;
+    align-content: center;  
+} 
+.imagen{
+    width: 200px;
+    border-radius: 10px;
+    opacity: 0.1;
+    transition: opacity 1s;
+    transition-property: width;
+    transition-duration: 0.5s;
+} 
+.imagen:hover{
+    opacity: 1;
+    width: 300px;
+}
+.video{
+    width: 65%;
+    height: 100%;
+    border-radius: 10px;
+    opacity: 0.1;
+    transition: opacity 1s;
+} 
+.video:hover{
+    opacity: 1;
+}
+.subtitulo{
+    font-size: 100px;
+}
+footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 140px;
+    justify-content: space-around;
+    align-items: center;
+    grid-template-areas: 
+      "a b"
+      "a b"
+      "a b"; 
+    align-self: center;
+}
+.informacion{
+    grid-area: a;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+.contacto{
+    padding: 20px;
+    grid-area: b;
+    background-color: #0f2838;
+    border: solid 4px #2d77a8;
+    border-radius: 10px;
+    color: #fff;
+}
+input{
+    width: 90%;
+}
+textarea{
+    width: 90%;
+}
+button{
+    background: #fff;
+    color: #2586d7;
+    border-radius: 5px;
+    border: solid 4px #000038;
+}
+iframe{
+    border-radius: 10px;
+}
+.informacion{
+    border: solid 4px #2d77a8;
+    border-radius: 10px;
+}
+@media (max-width:600px){
+    header{
+        display: flex;
+        flex-direction: column;
+        padding: 5px 15px;
+        text-align: center;
+        height: 115px;
+    }
+    header nav ul {
+        list-style-type: none;
+        padding: 0 10px;
+
+    }
+    header nav ul li{
+        display: inline;
+        padding: 0 3px;
+    }
+    .principal{
+        background: url("../imagenesracing/cilindroatardecer.jpg");
+        background-size: cover;
+    }
+    .contenido1 {
+        grid-area: a;
+        align-self: center;
+        justify-self: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 15px;
+        color: #000038;
+        background-color:rgba(0, 204, 240, 0.2);
+        border-radius: 10px;
+        text-align: center;}
+    .contenido {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: 120px;
+        justify-content: space-around;
+        align-items: center;
+        grid-template-areas: 
+          "a"
+          "a"
+          "b"
+          "b";
+      }
+    .imagen-principal {
+            grid-area: b;
+            text-align: center;
+            align-items: center;
+            align-content: center;
+          }
+          .descripcion{
+            grid-area: a;
+            text-align: center;
+            color: #fff;
+            font-family: sans-serif;
+          }
+    .imagen-secundaria{
+        display: none;
+    }
+    .subtitulo{
+        font-size: 30px;
+        padding: 10px;
+    }
+    footer{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        grid-auto-rows: 140px;
+        justify-content: start;
+        align-items: center;
+        grid-template-areas: 
+          "a"
+          "a"
+          "b"
+          "b"; 
+        align-self: center;
+        padding-top: 10px;
+        padding-left: 0px;
+    }
+    .informacion{
+        grid-area: a;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+    .contacto{
+        grid-area: b;
+        background-color: #0f2838;
+        border: solid 4px #2d77a8;
+        border-radius: 10px;
+        color: #fff;
+    }
+    iframe{
+        width: 80%;
+    }
+}
+@media (min-width:601px) and (max-width:900px){
+    header{
+        height: 100px;
+        display: flex;
+        flex-flow: row wrap;
+        }
+        
+        .titulo{
+        width: 50%;
+        }
+        .logo{
+           padding-top: 10px;
+        }
+        
+        .menu{
+        width: 80%;
+        padding-bottom: 20px;
+        }
+    .contenido1 {
+        align-self: center;
+        justify-self: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 25px;
+        color: #000038;
+        background-color:rgba(0, 204, 240, 0.2);
+        border-radius: 10px;
+        text-align: center;
+    }
+    .contenido {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: 120px;
+        justify-content: space-around;
+        align-items: center;
+        grid-template-areas: 
+          "a b"
+          "a b"
+          "a b"
+          "a b";
+      }
+    .imagen-principal {
+            grid-area: b;
+            text-align: center;
+            align-items: center;
+            align-content: center;
+          }
+          .descripcion{
+            grid-area: a;
+            text-align: center;
+            color: #fff;
+            font-family: sans-serif;
+          }
+    .imagen-secundaria{
+        display: none;
+    }
+    .subtitulo{
+        font-size: 50px;
+        padding: 10px;
+    }
+    iframe{
+        width: 80%;}
+}
